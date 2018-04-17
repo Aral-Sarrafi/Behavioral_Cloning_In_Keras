@@ -6,3 +6,6 @@
 * Normalization and Pre-processing**
 * Deep Netural Network Artchitercture**
 * Neural Network Training**
+
+# 1. Data Collection and Visualization
+Probably the most important part of this project which is playing a major role in the performance of the trained model is the data collection. In fact the trained deep neural network will learn and clone the driving pattern of the driver from the collected data. Therefore, if the quality of the data is not good the network will not be able to navigate the car sucessfully around the track.
