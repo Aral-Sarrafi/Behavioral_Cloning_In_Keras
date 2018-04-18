@@ -1,4 +1,5 @@
 [gif1]: ./Gif/ScreenCaptureProject2.gif
+[image1]: ./Figures/NVIDIA.jpg
 
 # Behavioral Cloning Implementation in Keras
 **Project Overview:** With in this projet the objective to drive a car aunomostly around a track using a deep neural network. The netural network is trained to predict the suitable steering angles based on the images that are available from the three cameras in fornt of the car. The training data set is collected by driving the car manually around the track and recording the images from the cameras as the input feature and the steering angles as the labels. The outline of the project is:
@@ -54,6 +55,9 @@ In deep learning projects it is always suitable to normalize the data to have ze
 # 4. Deep neural network architerture
 
 With in this project the deep neural network from the End to End Learning for Self-Driving Cars by [NVIDIA](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) has been adopted as below.
+
+<img src="./Figures/NVIDIA.jpg" width="400">
+
 The network is altered by adding two dropout layers for first two fully connected layers and the keep_prob is set to 0.5. Adding these dropout layers will prevent the model from over fitting, which enables the model to generalize better.
 
 ![alt text][gif1]
