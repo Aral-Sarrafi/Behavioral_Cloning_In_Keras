@@ -30,7 +30,9 @@ Probably the most important part of this project which is playing a major role i
 
 I combined all these collected data from the data provided by udacity, and in total it was about 1.5GB of data. In my experince collecting more data was the key to solve the problem. The more data I collected the model was generalzing better.
 
-Figures below shows a few examples of the collected data.
+Figures below shows a tow examples of the collected data from the camera located at the center.
+
+<img src="./Figures/image1.jpg" width="350"> <img src="./Figures/image2.jpg" width="350">
 
 # 2. Data distribution correction
 I deep learning applicatins having a good understanding of the statistics of the training data can be useful to train a efficient model. Figure below shows the histogram of the distribution of the **steering angles**.
@@ -85,11 +87,10 @@ For evaluation the trained model was used to navigate the car autonomously aroun
 
 # 6. Implementation notes and summary
 
-While implementing this project I learned a couple of notes that I would like to summurize here 
+While implementing this project I learned a couple of notes that I would like to summurize here: 
 
 * Collecting more data was the most effective way to train a sucssesful model
-* The computational load for training the model is high for this project and implemetation on AWS and GPU coputation was very helpful.
+* The computational load for training the model is high for this project and implemetation on AWS and GPU computations was very helpful.
 * The size of the data is large (1.5GB). Therefore, loading the whole data to the memory was not an option. Using generators to get acess to the data without loading the whole data to the memory was an effective solution.
 * Adding the dropout layers prevented the model from over fitting the training data.
 * Excluding some of the data points with zero steering angles enabled the model to be able to performe better in sharp turns.
-
