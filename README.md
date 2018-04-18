@@ -1,3 +1,5 @@
+[gif1]: ./Gif/ScreenCaptureProject2.gif
+
 # Behavioral Cloning Implementation in Keras
 **Project Overview:** With in this projet the objective to drive a car aunomostly around a track using a deep neural network. The netural network is trained to predict the suitable steering angles based on the images that are available from the three cameras in fornt of the car. The training data set is collected by driving the car manually around the track and recording the images from the cameras as the input feature and the steering angles as the labels. The outline of the project is:
 
@@ -35,6 +37,8 @@ Using this data distribution the model will be less biased towards **zero steeri
 Other than collecting data new data points can be obtained by data augmnetaion and also using the images from the left and right cameras. In order to use the images from the left and right cameras the steering agnles are correted using a correction factor which is tuned to **0.15**. In other words the **0.15** is added to the angles associated with the left images and **0.15** is sustracted from the images from the right cameras. The images from the side cameras can be useful to train the model to recover from the sides of the track. Moreover,in order to obtain a sytemtrix distribution of the data the images are fliped and the negation of the steering angles are used.
 
 
+
+
 # 4. Normalization and Pre-Processing
 Several stages of data normalization and Pre-processing are used to enhcance the pefromace of the model which will be discussed in this section:
 
@@ -51,3 +55,5 @@ In deep learning projects it is always suitable to normalize the data to have ze
 
 With in this project the deep neural network from the End to End Learning for Self-Driving Cars by [NVIDIA](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) has been adopted as below.
 The network is altered by adding two dropout layers for first two fully connected layers and the keep_prob is set to 0.5. Adding these dropout layers will prevent the model from over fitting, which enables the model to generalize better.
+
+![alt text][gif1]
