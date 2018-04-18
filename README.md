@@ -42,4 +42,12 @@ Several stages of data normalization and Pre-processing are used to enhcance the
 The deep neural network model that is used in this project is based on the YUV color space while the images captured by the  cameras are in RGB and cv2 reads the images in BGR. Therefore, in the data generator the images are converted from BGR to YUV.
 
 * 2. Cropping: 
-The top section of the images containes mostly 
+The top section of the images containes mostly the skk, background and other information which does not seem to be useful for predicting the steering angles. Moreover, some of the bottom pixels are associated with the hood of the car. These sections are cropped with in the the deep neural network implementation in keras to make sure that the training and prediction stage are both neglecting the undesired sections of the images.
+
+* 3. Normalization:
+In deep learning projects it is always suitable to normalize the data to have zeros mean and standard deviation of 1. Having a normalized data set will make the opmization procedure easired to optimizers such as gradient decent, stochastic gradient decent or Adam optimizer.
+
+# 4. Deep neural network architerture
+
+With in this project the deep neural network from the NVIDIA autonomous driving paper [NVIDIA autonomous driving paper](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) has been adopted as below.
+The network is altered by adding two dropout layers for first two fully connected layers and the keep_prob is set to 0.5. Adding these dropout layers will prevent the model from over fitting, which enables the model to generalize better.
