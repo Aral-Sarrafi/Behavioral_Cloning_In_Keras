@@ -16,7 +16,7 @@
 * Neural Network Training
 * Implementation notes and summary
 
-# 1. Data Collection and Visualization
+## 1. Data Collection and Visualization
 Probably the most important part of this project which is playing a major role in the performance of the trained model is the data collection. In fact the trained deep neural network will learn and clone the driving pattern of the driver from the collected data. Therefore, if the quality of the data is not good the network will not be able to navigate the car sucessfully around the track.
 
 * Summary of the collected data
@@ -34,7 +34,7 @@ Figures below shows a tow examples of the collected data from the camera located
 
 <img src="./Figures/image1.jpg" width="350"> <img src="./Figures/image2.jpg" width="350">
 
-# 2. Data distribution correction
+## 2. Data distribution correction
 I deep learning applicatins having a good understanding of the statistics of the training data can be useful to train a efficient model. Figure below shows the histogram of the distribution of the **steering angles**.
 
 ![alt text][image1]
@@ -45,13 +45,13 @@ As it is clear the steering angles are concentrated to value **zero** because mo
 
 Using this data distribution the model will be less biased towards **zero steering angles**
 
-# 3. Data Augmentation and adding the data from right and left cameras
+## 3. Data Augmentation and adding the data from right and left cameras
 Other than collecting data new data points can be obtained by data augmnetaion and also using the images from the left and right cameras. In order to use the images from the left and right cameras the steering agnles are correted using a correction factor which is tuned to **0.15**. In other words the **0.15** is added to the angles associated with the left images and **0.15** is sustracted from the images from the right cameras. The images from the side cameras can be useful to train the model to recover from the sides of the track. Moreover,in order to obtain a sytemtrix distribution of the data the images are fliped and the negation of the steering angles are used.
 
 
 
 
-# 4. Normalization and Pre-Processing
+## 4. Normalization and Pre-Processing
 Several stages of data normalization and Pre-processing are used to enhcance the pefromace of the model which will be discussed in this section:
 
 * 1. Converting BGR to YUV: 
@@ -63,7 +63,7 @@ The top section of the images containes mostly the skk, background and other inf
 * 3. Normalization:
 In deep learning projects it is always suitable to normalize the data to have zeros mean and standard deviation of 1. Having a normalized data set will make the opmization procedure easired to optimizers such as gradient decent, stochastic gradient decent or Adam optimizer.
 
-# 5. Deep neural network architerture
+## 5. Deep neural network architerture
 
 With in this project the deep neural network from the End to End Learning for Self-Driving Cars by [NVIDIA](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) has been adopted as below.
 
@@ -71,7 +71,7 @@ With in this project the deep neural network from the End to End Learning for Se
 
 The network is altered by adding two dropout layers for first two fully connected layers and the keep_prob is set to 0.5. Adding these dropout layers will prevent the model from over fitting, which enables the model to generalize better.
 
-# 5. Neural Network Training
+## 6. Neural Network Training
 After pre-processing the data and establishing the deep neural network arthitechture the model can be trained to predeic the streeing angles from the captured images the important parameters of the trainig are as follow:
 
 * 80% of the data is used as the trainning data points and 20% is assigned for the validation set
@@ -85,7 +85,7 @@ After 4 EPOCHS of training the mse will be **0.0056** for the training set and *
 For evaluation the trained model was used to navigate the car autonomously around the track. The gif below shows a few seconds of the performace of the trained model. The video named "run 1" in this repository shows that how the trained model can navigate the car through the full length of the track.
 ![alt text][gif1]
 
-# 6. Implementation notes and summary
+## 7. Implementation notes and summary
 
 While implementing this project I learned a couple of notes that I would like to summurize here: 
 
