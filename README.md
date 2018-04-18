@@ -31,4 +31,8 @@ As it is clear the steering angles are concentrated to value **zero** because mo
 
 Using this data distribution the model will be less biased towards **zero steering angles**
 
+# 3. Data Augmentation and adding the data from right and left cameras
+Other than collecting data new data points can be obtained by data augmnetaion and also using the images from the left and right cameras. In order to use the images from the left and right cameras the steering agnles are correted using a correction factor which is tuned to **0.15**. In other words the **0.15** is added to the angles associated with the left images and **0.15** is sustracted from the images from the right cameras. The images from the side cameras can be useful to train the model to recover from the sides of the track. Moreover,in order to obtain a sytemtrix distribution of the data the images are fliped and the negation of the steering angles are used.
+
+
 
