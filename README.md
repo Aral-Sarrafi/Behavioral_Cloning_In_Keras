@@ -52,12 +52,22 @@ The top section of the images containes mostly the skk, background and other inf
 * 3. Normalization:
 In deep learning projects it is always suitable to normalize the data to have zeros mean and standard deviation of 1. Having a normalized data set will make the opmization procedure easired to optimizers such as gradient decent, stochastic gradient decent or Adam optimizer.
 
-# 4. Deep neural network architerture
+# 5. Deep neural network architerture
 
 With in this project the deep neural network from the End to End Learning for Self-Driving Cars by [NVIDIA](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) has been adopted as below.
 
 <img src="./Figures/NVIDIA.jpg" width="400">
 
 The network is altered by adding two dropout layers for first two fully connected layers and the keep_prob is set to 0.5. Adding these dropout layers will prevent the model from over fitting, which enables the model to generalize better.
+
+# 5. Neural Network Training
+After pre-processing the data and establishing the deep neural network arthitechture the model can be trained to predeic the streeing angles from the captured images the important parameters of the trainig are as follow:
+
+* 80% of the data is used as the trainning data points and 20% is assigned for the validation set
+* Batch size = 32
+* EPOCHS = 4
+* Loss Function: Mean Squared Error (mse)
+* Optimizer: Adam optimizer
+* Learning Rate: defualt = 0.001
 
 ![alt text][gif1]
