@@ -14,6 +14,7 @@
 * Normalization and Pre-processing
 * Deep Netural Network Artchitercture
 * Neural Network Training
+* Implementation notes and summary
 
 # 1. Data Collection and Visualization
 Probably the most important part of this project which is playing a major role in the performance of the trained model is the data collection. In fact the trained deep neural network will learn and clone the driving pattern of the driver from the collected data. Therefore, if the quality of the data is not good the network will not be able to navigate the car sucessfully around the track.
@@ -78,4 +79,17 @@ After pre-processing the data and establishing the deep neural network arthitech
 * Optimizer: Adam optimizer
 * Learning Rate: defualt = 0.001
 
+After 4 EPOCHS of training the mse will be **0.0056** for the training set and **0.0053** for the validation set. This error is relatively small and it also shows that the network is having good predictions on both the training and validation sets (The errors are similar for both sets).
+For evaluation the trained model was used to navigate the car autonomously around the track. The gif below shows a few seconds of the performace of the trained model. The video named "run 1" in this repository shows that how the trained model can navigate the car through the full length of the track.
 ![alt text][gif1]
+
+# 6. Implementation notes and summary
+
+While implementing this project I learned a couple of notes that I would like to summurize here 
+
+* Collecting more data was the most effective way to train a sucssesful model
+* The computational load for training the model is high for this project and implemetation on AWS and GPU coputation was very helpful.
+* The size of the data is large (1.5GB). Therefore, loading the whole data to the memory was not an option. Using generators to get acess to the data without loading the whole data to the memory was an effective solution.
+* Adding the dropout layers prevented the model from over fitting the training data.
+* Excluding some of the data points with zero steering angles enabled the model to be able to performe better in sharp turns.
+
