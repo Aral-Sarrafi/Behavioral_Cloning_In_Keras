@@ -35,4 +35,11 @@ Using this data distribution the model will be less biased towards **zero steeri
 Other than collecting data new data points can be obtained by data augmnetaion and also using the images from the left and right cameras. In order to use the images from the left and right cameras the steering agnles are correted using a correction factor which is tuned to **0.15**. In other words the **0.15** is added to the angles associated with the left images and **0.15** is sustracted from the images from the right cameras. The images from the side cameras can be useful to train the model to recover from the sides of the track. Moreover,in order to obtain a sytemtrix distribution of the data the images are fliped and the negation of the steering angles are used.
 
 
+# 4. Normalization and Pre-Processing
+Several stages of data normalization and Pre-processing are used to enhcance the pefromace of the model which will be discussed in this section:
 
+* 1. Converting BGR to YUV: 
+The deep neural network model that is used in this project is based on the YUV color space while the images captured by the  cameras are in RGB and cv2 reads the images in BGR. Therefore, in the data generator the images are converted from BGR to YUV.
+
+* 2. Cropping: 
+The top section of the images containes mostly 
