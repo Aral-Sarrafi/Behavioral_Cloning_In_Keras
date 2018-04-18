@@ -1,5 +1,9 @@
 [gif1]: ./Gif/ScreenCaptureProject2.gif
-[image1]: ./Figures/NVIDIA.jpg
+[image1]: ./Figures/hist1.jpg
+[image2]: ./Figures/hist2.jpg
+[image3]: ./Figures/NVIDIA.jpg
+
+
 
 # Behavioral Cloning Implementation in Keras
 **Project Overview:** With in this projet the objective to drive a car aunomostly around a track using a deep neural network. The netural network is trained to predict the suitable steering angles based on the images that are available from the three cameras in fornt of the car. The training data set is collected by driving the car manually around the track and recording the images from the cameras as the input feature and the steering angles as the labels. The outline of the project is:
@@ -28,9 +32,13 @@ I combined all these collected data from the data provided by udacity, and in to
 Figures below shows a few examples of the collected data.
 
 # 2. Data distribution correction
-I deep learning applicatins having a good understanding of the statistics of the training data can be useful to train a efficient model. Figure below shows the histogram of the distribution of the **steering angles**
+I deep learning applicatins having a good understanding of the statistics of the training data can be useful to train a efficient model. Figure below shows the histogram of the distribution of the **steering angles**.
+
+![alt text][image1]
 
 As it is clear the steering angles are concentrated to value **zero** because most parts of the track are straigh. Using this data set to train the model will result to a model which is highly biased to **zero** steering angles, in other words the model will be more accurate in predicting **zero** steering angles, and it will be facing difficulties while predicting the steering angles while entering the turns. In order to overcome this draw back I excluded some of the data points associated with the zero steering angle. I excluded half of the data points with zero steering angle randomly. The distribution of the new data set is as shown in figure below.
+
+![alt text][image2]
 
 Using this data distribution the model will be less biased towards **zero steering angles**
 
