@@ -49,5 +49,5 @@ In deep learning projects it is always suitable to normalize the data to have ze
 
 # 4. Deep neural network architerture
 
-With in this project the deep neural network from the NVIDIA autonomous driving paper [NVIDIA autonomous driving paper](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) has been adopted as below.
+With in this project the deep neural network from the End to End Learning for Self-Driving Cars by [NVIDIA](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) has been adopted as below.
 The network is altered by adding two dropout layers for first two fully connected layers and the keep_prob is set to 0.5. Adding these dropout layers will prevent the model from over fitting, which enables the model to generalize better.
