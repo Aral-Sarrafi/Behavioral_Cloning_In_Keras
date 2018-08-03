@@ -1,4 +1,4 @@
-[gif1]: ./Gif/ScreenCaptureProject2.gif
+[gif1]: ./Drive.gif
 [image1]: ./Figures/hist1.jpg
 [image2]: ./Figures/hist2.jpg
 [image3]: ./Figures/NVIDIA.jpg
@@ -6,6 +6,9 @@
 
 
 # Behavioral Cloning Implementation in Keras
+
+![alt text][gif1]
+
 **Project Overview:** Within this project the objective to drive a car autonomously around a track using a deep neural network. The neutral network is trained to predict the suitable steering angles based on the images that are available from the three cameras in front of the car. The training data set is collected by driving the car manually around the track and recording the images from the cameras as the input feature and the steering angles as the labels. The outline of the project is:
 
 * Data collection and Visualization
