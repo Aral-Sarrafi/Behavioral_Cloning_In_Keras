@@ -7,7 +7,7 @@
 
 # Behavioral Cloning Implementation in Keras
 
-![alt text][gif1]
+<img src = "Behavioral Cloning Controller.gif" align="center" >
 
 **Project Overview:** Within this project the objective to drive a car autonomously around a track using a deep neural network. The neutral network is trained to predict the suitable steering angles based on the images that are available from the three cameras in front of the car. The training data set is collected by driving the car manually around the track and recording the images from the cameras as the input feature and the steering angles as the labels. The outline of the project is:
 
@@ -86,7 +86,8 @@ After pre-processing the data and establishing the deep neural network architect
 
 After 4 EPOCHS of training the mse will be **0.0056** for the training set and **0.0053** for the validation set. This error is relatively small and it also shows that the network is having good predictions on both the training and validation sets (The errors are similar for both sets).
 For evaluation the trained model was used to navigate the car autonomously around the track. The gif below shows a few seconds of the performance of the trained model. The video named "run 1" in this repository shows that how the trained model can navigate the car through the full length of the track.
-![alt text][gif1]
+<img src = "Behavioral Cloning Controller.gif" align="center" >
+
 
 ## 7. Implementation notes and summary
 
